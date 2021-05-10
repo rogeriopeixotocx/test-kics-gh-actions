@@ -16,6 +16,7 @@ jobs:
         with:
           path: 'terraform'
           output_path: results.sarif
+          ignore_on_exit: results
           platform_type: terraform
           exclude_queries: 0437633b-daa6-4bbc-8526-c0d2443b946e
       - name: Upload SARIF file

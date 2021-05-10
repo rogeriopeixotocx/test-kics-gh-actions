@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Run KICS Scan with SARIF result
-        uses: checkmarx/kics-action@docker-runner
+        uses: checkmarx/kics-action@1.1
         with:
           path: 'terraform'
           output_path: results.sarif

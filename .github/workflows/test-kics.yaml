@@ -12,10 +12,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Run KICS Scan with SARIF result
-        uses: checkmarx/kics-action@docker-runner
+        uses: checkmarx/kics-action@v1.2
         with:
           path: 'terraform'
           output_path: results.sarif
+          ignore_on_exit: results
           platform_type: terraform
           exclude_queries: 0437633b-daa6-4bbc-8526-c0d2443b946e
       - name: Upload SARIF file
